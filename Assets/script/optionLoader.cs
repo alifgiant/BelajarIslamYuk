@@ -41,15 +41,19 @@ public class optionLoader : MonoBehaviour {
 		if (soloMode) {
 			int jumlahRakaat = Random.Range(0,3);
 			Debug.Log("yang terpilih "+jumlahRakaat);
-
+			GameObject jam = GameObject.Find("jamViewer");
 			switch (jumlahRakaat) {
 				case 0: createAnswerOption(UrutanSholat2);
+					jam.GetComponent<Text>().text = "05:00 AM";
 					break;
 				case 1: createAnswerOption(UrutanSholat3);
+					jam.GetComponent<Text>().text = "06:10 PM";
 					break;
 				case 2: createAnswerOption(UrutanSholat4);
+					jam.GetComponent<Text>().text = "12:00 AM"; //Random jamnya antara 12:00, 15:30, 19:10					
 					break;
 				default: createAnswerOption(UrutanSholat2);
+					jam.GetComponent<Text>().text = "05:00 AM";
 					break;
 			}
 		}
@@ -66,12 +70,12 @@ public class optionLoader : MonoBehaviour {
 
 	void createAnswer(int[] answer){
 		int loc = Random.Range (0, 3);
-		try {
+//		try {
 	
 			GameObject newOpt = Instantiate (option, optionLocation[loc], Quaternion.identity) as GameObject;
-		//		Debug.Log("objek hadir");
-			newOpt.GetComponent<checkAnswer> ().setAsAnswer (); //set sebagai jawaban	
-			newOpt.GetComponent<checkAnswer> ().setUrutanSholat (answer); //memberi tahu urutan berikutnya
+			//Debug.Log("objek hadir");
+			newOpt.GetComponent<optionPicker> ().setAsAnswer (); //set sebagai jawaban	
+			newOpt.GetComponent<optionPicker> ().setUrutanSholat (answer); //memberi tahu urutan berikutnya
 
 			Transform child = newOpt.transform.FindChild("gambar");
 			child.GetComponent<SpriteRenderer>().sprite = GambarSholatAll[answer[++currentPhase]];
@@ -80,31 +84,48 @@ public class optionLoader : MonoBehaviour {
 			Debug.Log ("sekarang fase "+currentPhase);
 
 			locationTaken [loc] = true;
-		} catch {
-			Debug.Log("Game Berhasi");
-		}
+//		} catch {
+//			Debug.Log("Game Berhasi");
+//			GameObject.Find("EventSystem").GetComponent<checkSholatAnswer>().setWin(true);
+//		}
 	}
 
-	void createOption(){
+	void createOption(int[] answer){
+		bool[] taken = new bool[GambarSholatAll.Length];
+		taken [answer[currentPhase]] = true;
 		for (int i = 0; i < 3; i++) {
 			if (!locationTaken[i]) {
 				GameObject newOpt = Instantiate (option, optionLocation[i], Quaternion.identity) as GameObject;
-				newOpt.transform.FindChild("gambar").GetComponent<SpriteRenderer>().sprite = GambarSholatAll[Random.Range(0,7)];
-
+				int a = selectNumber(taken);
+				newOpt.transform.FindChild("gambar").GetComponent<SpriteRenderer>().sprite = GambarSholatAll[a];
+				taken[a] = true;
 				// menggagalkan load gambar berikutnya
-				newOpt.GetComponent<checkAnswer> ().setUrutanSholat (null);
+				newOpt.GetComponent<optionPicker> ().setUrutanSholat (null);
 			}
 		}
+	}
+
+	int selectNumber(bool[] taken){
+		int i = 0;
+		do {
+			i = Random.Range(0,taken.Length);
+		} while (taken[i]);
+		return i;
 	}
 
 	void createAnswerOption(int[] source){	
 		Debug.Log (source.Length);
 		locationTaken = new bool[3];
-		createAnswer (source);
-		createOption ();
-	}
+		try {
+			createAnswer (source);
+			createOption (source);
+		} catch {
+			Debug.Log("Game Berhasi");
+			GameObject.Find("EventSystem").GetComponent<checkSholatAnswer>().setWin(true);
+		}
+}
 
-	public void changePlayerState(int[] source){
+public void changePlayerState(int[] source){
 		player.GetComponent<SpriteRenderer> ().sprite = GambarSholatAll[ source [currentPhase]];
 		createAnswerOption (source);
 	}

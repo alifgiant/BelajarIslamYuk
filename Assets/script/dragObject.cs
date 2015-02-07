@@ -5,8 +5,8 @@ using TouchScript.Hit;
 
 public class dragObject : MonoBehaviour {
 
-	private float dist;
-	private Transform toDrag;
+//	private float dist;
+//	private Transform toDrag;
 
 	private GameObject placeNum;
 	private Vector3 initPlace;
@@ -34,7 +34,7 @@ public class dragObject : MonoBehaviour {
 	void HandleReleased (object sender, System.EventArgs e)
 	{
 		Debug.Log("released");
-		checkAnswer(placeNum);
+		placeObject(placeNum);
 	}	
 
 	void OnDisable(){
@@ -42,23 +42,30 @@ public class dragObject : MonoBehaviour {
 		GetComponent<ReleaseGesture>().Released -= HandleReleased;
 	}
 
-	void checkAnswer(GameObject place){
+	void placeObject(GameObject place){
 		try {
 			transform.position = placeNum.transform.position;
 		} catch (System.Exception ex) {
 			Debug.Log(ex);
-			transform.position = initPlace;
+			returnToInit();
 		}
+	}
+
+	void returnToInit(){
+		transform.position = initPlace;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log("collide");
 		placeNum = other.gameObject;
+		Debug.Log ("taken " + (System.Convert.ToInt32 (other.name [3])-49));
+		GameObject.Find ("EventSystem").GetComponent<checkWudhuAnswer> ().tookPlace ((System.Convert.ToInt32 (other.name [3])-49), int.Parse(gameObject.name));
 	}
 
 	void OnTriggerExit2D(Collider2D other){
 		Debug.Log("exit");
 		placeNum = null;
+		GameObject.Find ("EventSystem").GetComponent<checkWudhuAnswer> ().releasePlace ((System.Convert.ToInt32 (other.name [3])-49));
 	}
 
 	// Update is called once per frame

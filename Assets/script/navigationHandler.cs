@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class navigationHandler : MonoBehaviour {
-	//public int nextLevel[];
+	public int lastLevel;
 	GameSetting settings;
 
 	// Use this for initialization
@@ -14,11 +14,16 @@ public class navigationHandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//if (Input.GetKeyDown(KeyCode.Escape)) { Application.Quit(); }
+		if (Input.GetKeyDown(KeyCode.Escape)) { 
+			MovePage(lastLevel);
+		}
 	}
 
 	public void MovePage(int nextLevel){
-		Application.LoadLevel(nextLevel);
+		if (nextLevel==-1)
+			Application.Quit();
+		else
+			Application.LoadLevel(nextLevel);
 	}
 
 	#region mode parrent
