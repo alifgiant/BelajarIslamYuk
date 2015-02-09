@@ -1,16 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\optionLoader.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\Spawner.cs">
     <Files>
-      <File FileName="Assets\script\checkWudhuAnswer.cs" Line="48" Column="17" />
-      <File FileName="Assets\script\optionLoader.cs" Line="73" Column="8" />
-      <File FileName="Assets\script\GameSetting.cs" Line="32" Column="4" />
-      <File FileName="Assets\script\modeDetection.cs" Line="18" Column="48" />
-      <File FileName="Assets\script\dragObject.cs" Line="45" Column="18" />
-      <File FileName="Assets\script\checkSholatAnswer.cs" Line="21" Column="9" />
-      <File FileName="Assets\script\endGame.cs" Line="9" Column="17" />
-      <File FileName="Assets\script\navigationHandler.cs" Line="23" Column="21" />
-      <File FileName="Assets\script\optionPicker.cs" Line="50" Column="30" />
+      <File FileName="Assets\script\fallingObject.cs" Line="17" Column="7" />
+      <File FileName="Assets\script\hijaiyahGenerator.cs" Line="30" Column="89" />
+      <File FileName="Assets\script\Spawner.cs" Line="44" Column="4" />
+      <File FileName="Assets\script\checkHijaiyahAnswer.cs" Line="15" Column="3" />
+      <File FileName="Assets\script\GameSetting.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

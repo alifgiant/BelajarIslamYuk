@@ -30,6 +30,7 @@ public class optionLoader : MonoBehaviour {
 		optionLocation = new Vector2[3];
 
 		currentPhase = 0;
+		player.GetComponent<SpriteRenderer> ().sprite = GambarSholatAll [0];
 
 		optionLocation [0] = new Vector2 (-3.61f, 3.18f);
 		optionLocation [1] = new Vector2 (1f, 3.18f);

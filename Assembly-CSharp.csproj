@@ -47,11 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\script\GameSetting.cs" />
+     <Compile Include="Assets\script\Spawner.cs" />
      <Compile Include="Assets\script\cardGenerator.cs" />
+     <Compile Include="Assets\script\checkHijaiyahAnswer.cs" />
      <Compile Include="Assets\script\checkSholatAnswer.cs" />
      <Compile Include="Assets\script\checkWudhuAnswer.cs" />
      <Compile Include="Assets\script\dragObject.cs" />
      <Compile Include="Assets\script\endGame.cs" />
+     <Compile Include="Assets\script\fallingObject.cs" />
+     <Compile Include="Assets\script\hijaiyahGenerator.cs" />
      <Compile Include="Assets\script\hipmiMovement.cs" />
      <Compile Include="Assets\script\menuHadler.cs" />
      <Compile Include="Assets\script\mode.cs" />
