@@ -6,7 +6,7 @@ public class hijaiyahGenerator : MonoBehaviour {
 	public Sprite[] daftarGambar;
 	public GameObject itemKartu; //objeckContoh
 	int urutKartu;
-
+	
 	// Use this for initialization
 	void Start () {
 		createHuruf ();
