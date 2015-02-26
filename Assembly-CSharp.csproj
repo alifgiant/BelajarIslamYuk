@@ -60,6 +60,7 @@
      <Compile Include="Assets\script\menuHadler.cs" />
      <Compile Include="Assets\script\mode.cs" />
      <Compile Include="Assets\script\modeDetection.cs" />
+     <Compile Include="Assets\script\moveAwan.cs" />
      <Compile Include="Assets\script\navigationHandler.cs" />
      <Compile Include="Assets\script\optionLoader.cs" />
      <Compile Include="Assets\script\optionPicker.cs" />

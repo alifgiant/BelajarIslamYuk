@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class checkHijaiyahAnswer : MonoBehaviour {
+public class checkHijaiyahAnswer : MonoBehaviour{
 	public Color taken;
 	public int[] placedNumber;
 	bool[] answered;
 
 	// Use this for initialization
-	void Start () {
+	void Start(){
 		placedNumber = new int[10];
 		answered = new bool[10];
 	}
@@ -16,31 +16,49 @@ public class checkHijaiyahAnswer : MonoBehaviour {
 		placedNumber [place] = number;
 		answered [place] = false;
 	}
-
-	// Update is called once per frame
-	void Update () {
 	
-	}
 	public int getPlacedCardNum(){
-		if (placedNumber [currentNum]>28) return placedNumber [currentNum]+Random.Range(-1,0);
-		else if (placedNumber [currentNum]<1) return placedNumber [currentNum]+Random.Range(0,1);
-		else return placedNumber [currentNum]+Random.Range(-1,1);
+		if (currentNum < 10){
+			if (placedNumber [currentNum]>28) return placedNumber [currentNum]+Random.Range(-1,0);
+			else if (placedNumber [currentNum]<1) return placedNumber [currentNum]+Random.Range(0,1);
+			else return placedNumber [currentNum]+Random.Range(-1,1);
+		}return 0;
 	}
 
-	int currentNum = 0;
+	int currentNum = 8;
 	public Spawner spaw;
 	public endGame end;
-	public void checkAnswer(string huruf){
+	public GameObject optionBar;
 
-		Transform temp = transform.GetChild (currentNum);
-		if (temp.name.Equals(huruf) && !answered[currentNum]) {
-			temp.GetComponent<SpriteRenderer>().color = taken;
-			answered[currentNum++] = true;
-			return;
+	public void checkAnswer(string huruf){
+		Debug.Log (currentNum);
+		if (currentNum<10){
+			Transform temp = transform.GetChild (currentNum);
+			if (temp.name.Equals(huruf) && !answered[currentNum]) {
+				temp.GetComponent<SpriteRenderer>().color = taken;
+				answered[currentNum++] = true;
+			}
 		}
 		if (currentNum>9) {
+			Debug.Log("over");
 			spaw.isPlayed = false;
-			Debug.Log("Over");
+			optionBar.SetActive(true);
+			end.setWin(true,2);
 		}
 	}
+
+	public void resetGame(){
+		GameSetting settings = new GameSetting();		
+		settings.destroyAll("Option",this.gameObject);
+
+		Start (); 
+		currentNum = 8;
+
+		GameObject go = GameObject.Find ("EventSystem");
+		go.GetComponent<hijaiyahGenerator>().SendMessage ("Start");
+		go.GetComponent<Spawner>().reset();
+		end.gameObject.SetActive (false);
+		optionBar.SetActive (false);
+	}
+
 }

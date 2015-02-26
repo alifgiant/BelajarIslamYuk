@@ -23,11 +23,9 @@ public class checkSholatAnswer : MonoBehaviour {
 		endOption.SetActive(true);
 		if (stat) {
 			Debug.Log ("WIN");
-			endPanel.SetActive(true);
 			endPanel.GetComponent<endGame>().setWin(true,3);
 		} else {
 			Debug.Log ("LOSE");
-			endPanel.SetActive(true);
 			endPanel.GetComponent<endGame>().setWin(false,3);
 		}
 	}

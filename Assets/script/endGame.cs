@@ -11,6 +11,7 @@ public class endGame : MonoBehaviour {
 	}
 
 	public void setWin(bool condition, int page){
+		gameObject.SetActive (true);
 		if (condition) {
 			GameObject.Find ("endText1").GetComponent<Text> ().text = "HORE!!";
 			GameObject.Find ("endText2").GetComponent<Text> ().text = "MAIN LAGI?";
