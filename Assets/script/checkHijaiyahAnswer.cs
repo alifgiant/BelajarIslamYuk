@@ -25,7 +25,7 @@ public class checkHijaiyahAnswer : MonoBehaviour{
 		}return 0;
 	}
 
-	int currentNum = 8;
+	int currentNum = 0;
 	public Spawner spaw;
 	public endGame end;
 	public GameObject optionBar;
@@ -37,6 +37,11 @@ public class checkHijaiyahAnswer : MonoBehaviour{
 			if (temp.name.Equals(huruf) && !answered[currentNum]) {
 				temp.GetComponent<SpriteRenderer>().color = taken;
 				answered[currentNum++] = true;
+			}else{
+				Debug.Log("over");
+				spaw.isPlayed = false;
+				optionBar.SetActive(true);
+				end.setWin(false,2);
 			}
 		}
 		if (currentNum>9) {
@@ -52,7 +57,7 @@ public class checkHijaiyahAnswer : MonoBehaviour{
 		settings.destroyAll("Option",this.gameObject);
 
 		Start (); 
-		currentNum = 8;
+		currentNum = 0;
 
 		GameObject go = GameObject.Find ("EventSystem");
 		go.GetComponent<hijaiyahGenerator>().SendMessage ("Start");

@@ -7,12 +7,14 @@ public class Spawner : MonoBehaviour {
 	public float spawnDelay;	// The amount of time before spawning starts.
 	public GameObject huruf;
 	public checkHijaiyahAnswer cheker;
+	public PolygonCollider2D hipmiCollider;
 
 	Sprite[] daftarGambar;		// Daftar gambar
 
 	public bool isPlayed = true;
 	
 	void Start (){				// Use this for initialization
+		hipmiCollider.enabled = true;
 		daftarGambar = gameObject.GetComponent<hijaiyahGenerator> ().daftarGambar;
 		InvokeRepeating ("Spawning", spawnDelay, spawnTime);		
 	}
@@ -21,6 +23,8 @@ public class Spawner : MonoBehaviour {
 		isPlayed = true;
 		passedTime = 0f;
 	}
+
+	public float initSpeed;
 
 	// Update is called once per frame
 	float passedTime;
@@ -42,7 +46,7 @@ public class Spawner : MonoBehaviour {
 
 			temp.GetComponent<SpriteRenderer> ().sprite = daftarGambar[x];
 			temp.name = "huruf" + x;
-			temp.GetComponent<fallingObject> ().setSpeed (passedTime * 0.02f);
+			temp.GetComponent<fallingObject> ().setSpeed (passedTime * initSpeed);
 			temp.GetComponent<fallingObject> ().isFalling = true;
 			temp.transform.SetParent (GameObject.Find ("fallingGroup").transform);
 		}

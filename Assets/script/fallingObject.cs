@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class fallingObject : MonoBehaviour {
-	float speedMultiplier;
+	public float speedMultiplier;
 	// Use this for initialization
 	void Start () {
-		speedMultiplier = 0;
+		//speedMultiplier = 0;
 	}
 
 	public void setSpeed(float y){
@@ -13,6 +13,8 @@ public class fallingObject : MonoBehaviour {
 	}
 
 	public bool isFalling;
+	public int answerLocation;
+	public int cardNum;
 
 	// Update is called once per frame
 	void Update () {

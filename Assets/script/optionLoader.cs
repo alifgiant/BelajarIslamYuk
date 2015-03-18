@@ -24,7 +24,7 @@ public class optionLoader : MonoBehaviour {
 
 	Vector2[] optionLocation;
 	bool[] locationTaken;
-
+	public SpriteRenderer langit;
 	// Use this for initialization
 	void Start () {
 		optionLocation = new Vector2[3];
@@ -46,15 +46,19 @@ public class optionLoader : MonoBehaviour {
 			switch (jumlahRakaat) {
 				case 0: createAnswerOption(UrutanSholat2);
 					jam.GetComponent<Text>().text = "05:00 AM";
+					langit.color = new Color (0.7f,0.7f,0.7f);
 					break;
 				case 1: createAnswerOption(UrutanSholat3);
 					jam.GetComponent<Text>().text = "06:10 PM";
+					langit.color = new Color (0.95f,0.86f,0.576f);
 					break;
 				case 2: createAnswerOption(UrutanSholat4);
 					jam.GetComponent<Text>().text = "12:00 AM"; //Random jamnya antara 12:00, 15:30, 19:10					
+					langit.color = new Color (1f,1f,1f,1f);
 					break;
 				default: createAnswerOption(UrutanSholat2);
 					jam.GetComponent<Text>().text = "05:00 AM";
+					langit.color = new Color (0.7f,0.7f,0.7f);
 					break;
 			}
 		}

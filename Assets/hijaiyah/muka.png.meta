@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 7d73af15e300cd14f9c0a0fb7c4f9b4b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: muka_0
+    21300002: muka_1
+    21300004: muka_2
+    21300006: muka_3
+    21300008: muka_4
+    21300010: muka_5
+    21300012: muka_6
+    21300014: muka_7
+    21300016: muka_8
+    21300018: muka_9
+    21300020: muka_10
+    21300022: muka_11
+    21300024: muka_12
+    21300026: muka_13
+    21300028: muka_14
+    21300030: muka_15
+    21300032: muka_16
+    21300034: muka_17
+    21300036: muka_18
+    21300038: muka_19
+    21300040: muka_20
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: muka_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 311
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 313
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 322
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 323
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 303
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 303
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 272
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_7
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 275
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_8
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 276
+        width: 25
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_9
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 276
+        width: 11
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_10
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 151
+        width: 152
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_11
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 274
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 274
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 243
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 193
+        width: 11
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_15
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 193
+        width: 25
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_16
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 192
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 189
+        width: 68
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_18
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 210
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 8
+        width: 224
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muka_20
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 43
+        width: 127
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

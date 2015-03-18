@@ -39,7 +39,7 @@ public class endGame : MonoBehaviour {
 				GameObject.Find ("endText3").GetComponent<Text> ().text = "ADA URUTAN YANG SALAH";
 				break;
 			case 2: 
-				GameObject.Find ("endText3").GetComponent<Text> ().text = "SEMUA URUTAN SALAH";
+				GameObject.Find ("endText3").GetComponent<Text> ().text = "URUTAN BACA SALAH";
 				break;
 			case 3: 
 				GameObject.Find ("endText3").GetComponent<Text> ().text = "URUTAN SHOLATMU SALAH";
